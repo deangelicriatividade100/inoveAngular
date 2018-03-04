@@ -1,2 +1,7 @@
 # inoveAngular
-Layout in Angular5Sass
+Layout em Angular5 e Sass
+
+Passos:
+   npm install
+   ng serve --open
+   
