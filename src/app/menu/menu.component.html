@@ -1,0 +1,49 @@
+<mat-sidenav-container class="menu-container">
+    <mat-sidenav class="menu-nav" #sidenav mode="side" 
+                [(opened)]="opened">
+        <figure class="brand">
+            <img src="assets/img/brand.png"/><span>Educacional</span> 
+        </figure>        
+        <figure class="user-profile">
+            <img src="assets/img/user.png"/><span><strong>Demetrius</strong>Secretário</span>
+        </figure>        
+        <ul class="menu">
+            <li *ngFor="let item of options" [ngClass]="{ 'selected': item.selected }">
+                <a routerLink="" routerLinkActive="active" >
+                    <img src="{{ 'assets/img/' + item.icon + '.png' }}">	{{ item.title }}
+                </a>
+            </li>
+        </ul>
+    </mat-sidenav>
+  
+    <mat-toolbar class="toolbar-container">
+        <mat-toolbar-row class="toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+          <div>
+            <button mat-icon-button (click)="sidenav.toggle()">
+              <mat-icon>menu</mat-icon>
+            </button>
+          </div>
+          
+          <label class="page-title">PERÍODO LETIVO 2018/1</label>
+          
+          <div class="student-info">
+            <div class="identify">   
+                <strong>Luiz Melo</strong>
+                Sala 2A
+            </div>
+            <img src="assets/img/user.png"/>
+            <span class="pipe">|</span>
+            <mat-icon>persony</mat-icon>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>arrow_drop_down</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Sair</button>
+            </mat-menu>
+        </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+    
+</mat-sidenav-container>

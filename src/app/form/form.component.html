@@ -1,0 +1,117 @@
+<div class="main-content">
+
+  <mat-card>
+
+      <mat-radio-group class="tabs">
+        
+        <mat-radio-button fxFlex="20" class="tab" mat-button value="1">Matrícula</mat-radio-button>
+        
+        <mat-radio-button fxFlex="20" class="tab" mat-button value="2">Boletim Escolar</mat-radio-button>
+        
+        <mat-radio-button fxFlex="20" class="tab" mat-butto value="3">Contrato Escolar</mat-radio-button>
+        
+        <mat-radio-button fxFlex="20" class="tab" mat-button value="4">Boletos</mat-radio-button>
+        
+        <mat-radio-button fxFlex="20" class="tab" mat-button value="5">Mensagens</mat-radio-button>
+  
+        <mat-radio-button fxFlex="20" class="tab" mat-button value="6">Documentos</mat-radio-button>
+  
+      </mat-radio-group>
+
+    <form>
+
+      <span class="title"><img src="assets/img/cap.png"/><h3>DADOS DO ALUNO</h3></span>
+      <fieldset>
+        <legend>Identificação</legend>
+        <div class="inputs">
+
+          <mat-form-field fxFlex="50" class="input-container">
+              <input matInput [(ngModel)]="nome" name="nome" type="text" placeholder="Nome">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+              <input matInput disabled="disabled" [(ngModel)]="registry" name="registry" type="text" placeholder="Registro Acadêmico">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+              <input matInput  [(ngModel)]="registerDate" name="registerDate" type="date" placeholder="Data de Cadastro">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+              <input matInput  [(ngModel)]="cpf" name="cpf" type="text" pattern="[-0-9]*" placeholder="CPF">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+              <input matInput  [(ngModel)]="rg" name="rg" type="text" pattern="[-0-9]*" placeholder="RG" maxlength="9">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+              <input matInput  [(ngModel)]="bornDate" name="bornDate" type="date" placeholder="Data de Nascimento">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+            <mat-select matInput name="sexo" placeholder="Sexo" [(ngModel)]="gender" name="gender">
+              <mat-option value="masculino">Masculino</mat-option>
+              <mat-option value="feminino">Feminino</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+      </fieldset>
+      
+      <fieldset>
+          <legend>Filiação</legend>
+          <div class="inputs">
+
+         <mat-form-field fxFlex="50" class="input-container">
+            <input matInput [(ngModel)]="monther" name="monther" type="text" placeholder="Nome da mãe">
+         </mat-form-field>
+
+         <mat-form-field fxFlex="50" class="input-container">
+                <input matInput [(ngModel)]="father" name="father" type="text" placeholder="Nome da pai">
+         </mat-form-field>
+
+        </div>
+      </fieldset>
+      
+      <fieldset>
+          <legend>Endereço</legend>
+          <div class="inputs">
+
+          <mat-form-field fxFlex="25" class="input-container">
+            <input matInput [(ngModel)]="stateCity" name="stateCity" type="text" placeholder="Cidade/Estado">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+            <input matInput [(ngModel)]="cep" name="cep" type="text" placeholder="CEP">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+            <input matInput [(ngModel)]="adress" name="adress" type="text" placeholder="Endereço">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+            <input matInput [(ngModel)]="bairro" name="bairro" type="text" placeholder="Bairro">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+            <input matInput [(ngModel)]="phone" name="phone" type="text" pattern="[-0-9]*" placeholder="Telefone Residencial">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="25" class="input-container">
+            <input matInput [(ngModel)]="cell" name="cell" type="text" pattern="[-0-9]*" placeholder="Telefone Celular">
+          </mat-form-field>
+
+          <mat-form-field fxFlex="50" class="input-container">
+            <input matInput [(ngModel)]="mail" name="mail" type="email"  placeholder="E-mail">
+          </mat-form-field>
+
+        </div>
+      </fieldset>
+      <div class="wrap-button">
+      <button mat-raised-button color="primary"><mat-icon>done</mat-icon>Salvar</button>
+      </div>  
+    </form>
+</mat-card>
+<h4> &reg; INOVE - Centro Educacional de Inovação</h4>
+</div>

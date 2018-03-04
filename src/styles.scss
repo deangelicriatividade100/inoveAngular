@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$energized: #F1592B;
+
+@font-face {
+    font-family: 'opensans-bold';
+    src: url('./assets/fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'opensans-semibold';
+    src: url('./assets/fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'opensans-regular';
+    src: url('./assets/fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'opensans-light';
+    src: url('./assets/fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'opensans-regular';
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+
+.mat-radio-button {
+    .mat-radio-container {
+        display: none !important;
+    }
+
+    &.tab input {
+        display: none;
+    }
+}
+
+.input-container {
+
+    .mat-input-underline,
+    .mat-input-subscript-wrapper {
+        display: none;
+    }
+
+    .mat-select-trigger {
+        height: 100%;
+    }
+    .mat-select-value {
+        margin: 0;
+        padding: 0;
+        line-height: 32px;
+        height: 100%;
+    }
+
+    &:not(.mat-focused):not(.mat-form-field-should-float) {
+        .mat-form-field-label {
+            margin-left: 10px;
+            margin-top: 2px;
+        }
+    }
+
+    .mat-form-field-label {
+        color: #555;
+        font-size: 14pt;
+    }
+
+}
